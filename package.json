@@ -1,0 +1,47 @@
+{
+  "name": "@dwidge/class-name-rnw",
+  "version": "0.0.1",
+  "description": "Add className and stylesheet props to React Native Web components.",
+  "repository": "github:dwidge/class-name-rnw",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/types/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/cjs/index.js",
+      "import": "./dist/esm/index.js",
+      "types": "./dist/types/index.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "prepare": "rimraf dist && ncp assets/ dist/ && tsc -b tsconfig*",
+    "dev": "tsc -w",
+    "test": "node --test"
+  },
+  "peerDependencies": {
+    "@rneui/base": "4.0.0-rc.7",
+    "@rneui/themed": "4.0.0-rc.8",
+    "react": "^18.2",
+    "react-native": "^0.74.5",
+    "react-native-web": "^0.19.12"
+  },
+  "devDependencies": {
+    "@types/node": "^22.5.4",
+    "expect": "^29.7.0",
+    "ncp": "^2.0.0",
+    "prettier": "^3.2.5",
+    "rimraf": "^5.0.5",
+    "typescript": "^5.6.2"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "packageManager": "pnpm@9.7.1",
+  "engines": {
+    "node": ">=20"
+  }
+}
