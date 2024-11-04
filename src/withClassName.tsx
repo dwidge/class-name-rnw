@@ -66,11 +66,9 @@ const getMatchedStyles = <StyleType extends Record<string, any>>(
 ): StyleType[] =>
   stylesheet
     ? Object.keys(stylesheet)
+        .sort()
         .filter((key) =>
-          key
-            .split(" ")
-            .filter(Boolean)
-            .every((cls) => classNames.includes(cls)),
+          getClassNames(key).every((cls) => classNames.includes(cls)),
         )
         .map((matchedKey) => stylesheet[matchedKey])
     : [];
