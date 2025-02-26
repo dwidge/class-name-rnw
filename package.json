@@ -1,6 +1,6 @@
 {
   "name": "@dwidge/class-name-rnw",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Add className and stylesheet props to React Native Web components.",
   "repository": "github:dwidge/class-name-rnw",
   "main": "./dist/cjs/index.js",
@@ -34,7 +34,7 @@
     "ncp": "^2.0.0",
     "prettier": "^3.2.5",
     "rimraf": "^5.0.5",
-    "typescript": "^5.6.2"
+    "typescript": "^5.7.3"
   },
   "publishConfig": {
     "access": "public"
